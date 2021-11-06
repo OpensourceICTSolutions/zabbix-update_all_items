@@ -12,8 +12,8 @@ import requests
 import json
 import sys
 
-url = 'http://192.168.0.3/zabbix/api_jsonrpc.php?'
-token = '8f4178122b4ea2dc8d1d5bd370b446a520e15163fb9f118c3e2da8dd807d615e'
+url = 'http://<URL>/zabbix/api_jsonrpc.php?'
+token = '<TOKEN>'
 
 headers = {'Content-Type': 'application/json'}
 
