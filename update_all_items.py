@@ -55,11 +55,8 @@ def itemid_get(hostid,token):
     payload['auth'] = token
     payload['id'] = 1
 
-#    print(json.dumps(payload))
     request = requests.post(url, data=json.dumps(payload), headers=headers)
     data = request.json()
-
-#    print(data)
 
     itemid_array = []
     for itemid in data['result']:
@@ -80,7 +77,6 @@ def update(itemid_array,token):
     payload['auth'] = token
     payload['id'] = 1
 
-    #print("payload = " + json.dumps(payload))
     request = requests.post(url, data=json.dumps(payload), headers=headers)
     data = request.json()
     json_string = json.dumps(data)
@@ -88,5 +84,4 @@ def update(itemid_array,token):
     print(json_string)
 
 if __name__ == '__main__':
-    # Call to main
     main()
